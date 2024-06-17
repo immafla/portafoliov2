@@ -11,38 +11,75 @@ interface Props {
 const { title, subtitle, body, stackDev, proyects, colorTheme } = Astro.props;
 ---
 
-<div class="card" style={{ backgroundColor: colorTheme }}>
-	<h2>
-		{title}
-	</h2>
-	<h2>
-		{subtitle}
-	</h2>
-	<ul>
-		{
-			body.map(itemFunction => <li>{itemFunction}</li>)
-		}
-	</ul>
-	<div class="stack">
-		Stack development 
-		{
-			stackDev.map(imageStack => <img src={imageStack} width="24px"/>)
-		}
-	</div>
-	<div class="projects">
-		Proyectos
-		{
-			proyects.map(imageProject => <img src={imageProject} width="64px"/>)
-		}
+<div class="card-container">
+	<div class="card" style={{ backgroundColor: colorTheme }}/>
+	<div class="content">
+		<h2>
+			{title}
+		</h2>
+		<h2>
+			{subtitle}
+		</h2>
+		<ul>
+			{
+				body.map(itemFunction => <li>{itemFunction}</li>)
+			}
+		</ul>
+		<div class="stack">
+			Stack development 
+			{
+				stackDev.map(imageStack => <img src={imageStack} width="24px"/>)
+			}
+		</div>
+		<div class="projects">
+			Proyectos
+			{
+				proyects.map(imageProject => <img src={imageProject} width="64px"/>)
+			}
+		</div>
 	</div>
 </div>
 
 <style>
-	.card {
-		padding: 15px 20px;
+	.card-container {
+		position: relative;
+		/* width: 300px;
+		height: 300px; */
+		border: 2px solid #ffffff4b;
 		border-radius: 25px;
-		opacity: 0.8;
 	}
+	.card {
+		width: 500px;
+		height: 450px;
+		background-color: lightblue;
+		border-radius: 25px;
+		opacity: 0.13;
+		/* text-align: center; */
+		/* Para centrar verticalmente el texto */
+		/* line-height: 300px;  */
+
+		/* width: 350px;
+		height: auto; */
+		/* font-size: 20px;
+		
+		 */
+	}
+
+	.content {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 100%;
+		height: 100%;
+		margin: 15px 20px;
+		/* background-color: rgba(255, 0, 0, 0.5); */
+		/* text-align: center; */
+		/* Para centrar verticalmente el texto */
+		/* line-height: 150px;  */
+	}
+
+	
 
 	.stack {
 		display: flex;
@@ -63,5 +100,9 @@ const { title, subtitle, body, stackDev, proyects, colorTheme } = Astro.props;
 	p {
 		margin-top: 0.5rem;
 		margin-bottom: 0;
+	}
+
+	ul li {
+		font-size: 16px;
 	}
 </style>

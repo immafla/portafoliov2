@@ -1,8 +1,8 @@
 ---
 import CardTimeline from './CardTimeline.astro'
-
+import { type Employment } from '../interfaces'
 interface Props {
-	employmentData:any[]
+	employmentData:Employment[]
 }
 
 const { employmentData } = Astro.props;
@@ -12,7 +12,11 @@ const { employmentData } = Astro.props;
 	{
 		employmentData.map((itemEmploye, index) => 
 			<div class={`item-timeline ${index%2==0 ? "rigth" : "left"}`}>
-				<img src={itemEmploye.companyLogo} width="220px" height="220px"/>
+				<div class="company-logo">
+					<img src={itemEmploye.companyLogo} width="220px" height="220px"/>
+				</div>
+				<hr class="hl" style={{width:"13%",marginLeft:`${index%2==0 ? "22%" : "-22%"}`, border: `2.5px solid ${itemEmploye.colorTheme}`}}/>
+				<div class="vl" style={{borderLeft: `6px solid ${itemEmploye.colorTheme}`}}></div>
 				<CardTimeline
 					title={itemEmploye.title}
 					subtitle={itemEmploye.subtitle}
@@ -27,14 +31,35 @@ const { employmentData } = Astro.props;
 </div>
 
 <style>
-	.container-timeline{
-		width: 100%;
-	}
 	.item-timeline {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
 	}
+
+	.company-logo {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		width: 45%;
+	}
+	.vl {
+		position: absolute;
+		left: 50%;
+		height: 453px;
+	}
+
+	.hl {
+		position: absolute;
+		/* left: 50%;
+		height: 453px; */
+	}
+
+
+	.container-timeline{
+		width: 100%;
+	}
+	
 	.left {
 		flex-direction: row-reverse;
 	}

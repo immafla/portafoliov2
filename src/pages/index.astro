@@ -1,138 +1,24 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Timeline from '../components/Timeline.astro';
-import { icons_tech, icons_products } from '../utils/icons'
-import { company_logos } from '../utils/images'
-import { colors } from '../utils/constants'
-
-const employmentData = [
-	//Periferia
-	{	
-		companyLogo: company_logos.periferia,
-		title:"Lider técnico frontend, Fábrica de desarrollo:",
-		subtitle: "Junio 2023 - Actualmente / Tiempo completo",
-		body: [
-			"Liderar y delegar funciones al equipo de desarrollo.", 
-			"Apoyo técnico a proyectos en diferentes tecnologías web.", 
-			"Ocasionalmente dictar semilleros front end."
-		],
-		stackDev: [
-			icons_tech.reactjs,
-			icons_tech.angular,
-			icons_tech.node,
-			icons_tech.html,
-			icons_tech.css,
-			icons_tech.graphql,
-		],
-		proyects: [
-			icons_products.gou,
-			icons_products.avalpaycenter
-		],
-		colorTheme: colors.periferia
-	},
-	//Adl
-	{
-		companyLogo: company_logos.adl,
-		title:"Desarrollador frontend, Avaldigitallabs:",
-		subtitle: "Septiembre 2021 - Junio 2023 / Tiempo completo",
-		body: [
-			"Participar en la definición del producto.",
-			"Implementar y crear microfrontends.",
-			"Se logro mejorar la seguridad del aplicativo y la optimización del SEO.",
-			"Definición e implementación de arquitectura por organismos.",
-			"Se logra aumentar la cobertura de pruebas unitarias de 90%.",
-			"Se logra reducir los code smells a menos del 10%.",
-			"Se logra reducir el codigo repetido a menos del 8%.",
-			"Maquetación responsive design de todas las vistas."
-		],
-		stackDev: [
-			icons_tech.reactjs,
-			icons_tech.html,
-			icons_tech.css,
-			icons_tech.node,
-			icons_tech.graphql,
-			icons_tech.redux,
-			icons_tech.dynamodb,
-			icons_tech.jest,
-		],
-		proyects: [
-			icons_products.gou,
-		],
-		colorTheme: colors.adl
-	},
-	//Mineducacion
-	{
-		companyLogo: company_logos.mineducacion,
-		title:"Desarrollador fullstack",
-		subtitle: "Marzo 2022 - Febrero 2023 / Freelance",
-		body: [
-			"Se logra migrar al 100% el aplicativo a Angular 13.",
-			"Se diseña e implementa la arquitectura de infraestructura y frontend.",
-			"Se aprovisiona la infraestructura del servidor con linux, docker y nginx.",
-			"Se diseñan las interfaces con mocks en figma.",
-			"Se logra mejorar la UI/UX con bootstrap.",
-			"Se implementan el consumo de servicios de geolicalización y mapas.",
-			"Maquetación de todas las vistas en responsive design.",
-			"Se implementan metodos para optimizar la seguridad del app.",
-			"Se logra dockerizar microservicios en JAVA y el proyecto angular.",
-			"Automatizar despliegues continuos con scripts de linux."
-		],
-		stackDev: [
-			icons_tech.angular,
-			icons_tech.html,
-			icons_tech.css,
-			icons_tech.bootstrap,
-			icons_tech.node,
-			icons_tech.nginx,
-			icons_tech.github,
-			icons_tech.docker,
-		],
-		proyects: [
-			icons_products.gou,
-		],
-		colorTheme: colors.mineducacion
-	},
-	//Salud electronica
-	{
-		companyLogo: company_logos.salud_electronica,
-		title:"Desarrollador fullstack:",
-		subtitle: "Abril 2023 - Actualmente / Freelance",
-		body: [
-			"Participar en la definición del producto.",
-			"Dividir funcionalidades en componentes atomicos.",
-			"Maquetación responsive design de todas las vistas.",
-			"Diseño y uso de bases de datos.",
-			"Optimización del rendimiento de las consultas en MongoDB.",
-			"Optimización del rendimiento en el renderizado con datos masivos.",
-		],
-		stackDev: [
-			icons_tech.nextjs,
-			icons_tech.reactjs,
-			icons_tech.html,
-			icons_tech.css,
-			icons_tech.node,
-			icons_tech.github,
-		],
-		proyects: [
-			icons_products.octa_cloud,
-		],
-		colorTheme: colors.saludelectronica
-	}
-]
+import { employmentData } from '../data/employmentData'
 ---
 
 <Layout title="Bienvenido a mi portafolio">
 	<main>
+		<header>
+			<img src="images/bar.svg" alt="" width="700px" height="100px">
+		</header>
 		<section class="logo_portfolio">
 			<img src="icons/logo_0.svg" alt="">
-			Ivan Mafla
+			Ivan </br>Mafla  </br>
 			Senior Frontend enginer
 		</section>
 
 		<div class="bio">
-			Soy ingeniero de software, me especializo en construir 
+			<strong style={{color:'#CCFF66'}}>+5 años de experiencia</strong>, <>Soy ingeniero electrónico orientado a desarrollo web y me especializo en construir 
 			(y ocasionalmente diseñar) aplicaciones web, Actualmente 
-			estoy enfocado en plataformas de pagos del grupo aval. 
+			estoy enfocado en plataformas de pagos. 
 		</div>
 		<section class="timeline">
 			<span>
@@ -144,25 +30,40 @@ const employmentData = [
 </Layout>
 
 <style>
+	header {
+		top: 0;
+	}
 	main {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		margin: auto;
-		padding: 1rem;
-		width: 1400px;
+		width: 1156px;
 		max-width: calc(100% - 2rem);
 		color: white;
-		font-size: 20px;
+		font-size: 16px;
 		line-height: 1.6;
 	}
 
 	.logo_portfolio{
 		margin-top: 100px;
+		text-align: justify;
+		float: left;
 	}
 	.bio {
-		width: 500px;
+		font-size: 20px;
+		text-align: center;
+		width: 600px;
 		padding: 50px;
+		text-shadow: 2px;
+		line-height: 26px;
+/* 
+		overflow: hidden;
+		height: 5px;
+		border-right: .15em solid orange;
+		white-space: nowrap;
+		animation: typing 1s steps(150, end) forwards;
+		width: 0; */
 	}
 
 	.timeline{
@@ -175,7 +76,12 @@ const employmentData = [
 
 	span{
 		font-size: 28px;
-		padding: 50px;
+		/* padding: 50px; */
+	}
+
+	@keyframes typing {
+		from { width: 0 }
+		to { width: 100% }
 	}
 
 </style>
