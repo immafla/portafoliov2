@@ -6,5 +6,5 @@ export interface Employment {
 	body: string[];
 	stackDev: string[];
 	proyects: string[];
-	colorTheme: string;
+	colorTheme: (value:number) => string;
 }

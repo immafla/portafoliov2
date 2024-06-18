@@ -27,7 +27,7 @@ export const employmentData: Employment[] = [
 			icons_products.gou,
 			icons_products.avalpaycenter
 		],
-		colorTheme: colors.periferia
+		colorTheme: (op) => colors.periferia(op)
 	},
 	//Adl
 	{
@@ -58,7 +58,7 @@ export const employmentData: Employment[] = [
 		proyects: [
 			icons_products.gou,
 		],
-		colorTheme: colors.adl
+		colorTheme: (op) => colors.adl(op)
 	},
 	//Mineducacion
 	{
@@ -68,15 +68,15 @@ export const employmentData: Employment[] = [
 		subtitle: "Marzo 2022 - Febrero 2023 / Freelance",
 		body: [
 			"Se logra migrar al 100% el aplicativo a Angular 13.",
-			"Se diseña e implementa la arquitectura de infraestructura y frontend.",
-			"Se aprovisiona la infraestructura del servidor con linux, docker y nginx.",
-			"Se diseñan las interfaces con mocks en figma.",
+			"Diseño e implementación de infraestructura y frontend.",
+			"Aprovisionamiento de infraestructura (linux+docker+nginx).",
+			"Diseño de mocks con figma.",
 			"Se logra mejorar la UI/UX con bootstrap.",
 			"Se implementan el consumo de servicios de geolicalización y mapas.",
 			"Maquetación de todas las vistas en responsive design.",
 			"Se implementan metodos para optimizar la seguridad del app.",
 			"Se logra dockerizar microservicios en JAVA y el proyecto angular.",
-			"Automatizar despliegues continuos con scripts de linux."
+			"Automatizacion y despliegues continuos."
 		],
 		stackDev: [
 			icons_tech.angular,
@@ -91,7 +91,7 @@ export const employmentData: Employment[] = [
 		proyects: [
 			icons_products.gou,
 		],
-		colorTheme: colors.mineducacion
+		colorTheme: (op) => colors.mineducacion(op)
 	},
 	//Salud electronica
 	{
@@ -118,6 +118,6 @@ export const employmentData: Employment[] = [
 		proyects: [
 			icons_products.octa_cloud,
 		],
-		colorTheme: colors.saludelectronica
+		colorTheme: (op) => colors.saludelectronica(op)
 	}
 ]

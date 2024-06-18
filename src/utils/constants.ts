@@ -1,6 +1,6 @@
 export const colors = {
-    periferia : "#6E9D36",
-    adl:"#524C99",
-    mineducacion: "#335EA7",
-    saludelectronica: "#B2B3B3",
+    periferia : (opacity: number = 1) => `rgba(110,157,54,${opacity})`,
+    adl: (opacity: number = 1) => `rgba(82,76,153,${opacity})`,
+    mineducacion: (opacity: number = 1) => `rgba(51,94,167,${opacity})`,
+    saludelectronica: (opacity: number = 1) => `rgba(178,179,179,${opacity})`,
 }
