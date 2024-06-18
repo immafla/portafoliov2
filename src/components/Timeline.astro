@@ -22,7 +22,7 @@ const { employmentData } = Astro.props;
 				<div class="t-container" style={{transform: `${index%2==0 ? "rotate(90deg)" : "rotate(-90deg)"} `}}>
 					<div class="horizontal-line" style={{backgroundColor: `${itemEmploye.colorTheme(1)}`}}></div>
 					<div class="vertical-line" style={{backgroundColor: `${itemEmploye.colorTheme(1)}`}}></div>
-					<div class="circle" style={{backgroundColor: `${itemEmploye.colorTheme(1)}`}}></div>
+					<div class="circle" style={{border: `6px solid ${itemEmploye.colorTheme(1)}`,backgroundColor: `rgba(20,48,51,1)`}}></div>
 				</div>
 
 				<div class="timeline-section">
@@ -96,8 +96,8 @@ const { employmentData } = Astro.props;
 		transform: translateX(-50%);
 	}
 	.circle {
-		width: 30px;
-		height: 30px;
+		width: 25px;
+		height: 25px;
 		border-radius: 50%;
 		position: absolute;
 		top: 0;
