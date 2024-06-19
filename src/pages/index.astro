@@ -1,84 +1,22 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Timeline from '../components/Timeline.astro';
-import { employmentData } from '../data/employmentData'
+import NavBar from '../components/Shared/NavBar.astro';
+import SocialMedia from '../components/Shared/SocialMedia.astro';
+import Landing from '../components/Sections/Landing.astro';
+import Experience from '../components/Sections/Experience.astro';
+import { EmployeData } from '../data'
 ---
 
 <Layout title="Bienvenido a mi portafolio">
 	<main>
-
-
-		<nav>
-			<ul class="menu">
-				<li>
-					Experiencia
-				</li>
-				<li>
-					Formación
-				</li>
-				<li>
-					Sobre mí
-				</li>
-				<li>
-					Contacto
-				</li>
-			</ul>
-		</nav>
-
-		<section class="logo_portfolio">
-			<img src="icons/logo_0.svg" alt="">
-			<div class="name">
-				<div class="names">
-					Iván </br>Mafla
-				</div>
-				<div class="profesion">
-					Senior Frontend enginer
-				</div>
-			</div>
-		</section>
-
-		<div class="bio">
-			<strong style={{color:'#CCFF66'}}>+5 años de experiencia</strong>, <>Soy ingeniero electrónico orientado a desarrollo web y me especializo en construir 
-			(y ocasionalmente diseñar) aplicaciones web, Actualmente 
-			estoy enfocado en plataformas de pagos. 
-		</div>
-		<section class="timeline">
-			<span>
-				Experiencia laboral
-			</span>
-			<Timeline employmentData={employmentData}/>
-		</section>
+		<NavBar />
+		<SocialMedia />
+		<Landing {...EmployeData}/>
+		<Experience />
 	</main>
 </Layout>
 
 <style>
-	.menu{
-		display: flex;
-		justify-content: center;
-		list-style: none;
-		background-color: rgba(204, 255, 102, 0.5);
-		border-radius: 15px;
-		color: white;
-		padding-inline-end: 38px;
-	}
-
-	ul > li {
-		padding-block: 10px;
-		padding-inline: 40px;
-	}
-	ul > li:hover {
-		cursor: pointer;
-		background-color: rgba(204, 255, 102, 0.6);;
-	}
-	
-	nav{
-		width: -webkit-fill-available;
-		justify-content: center;
-		position: fixed;
-		align-items: center;
-    	display: flex;
-		z-index: 2;
-	}
 	main {
 		display: flex;
 		flex-direction: column;
@@ -90,61 +28,4 @@ import { employmentData } from '../data/employmentData'
 		font-size: 16px;
 		line-height: 1.6;
 	}
-
-	.logo_portfolio{
-		display: flex;
-		flex-direction: row;
-		margin-top: 25dvh;
-		text-align: justify;
-		float: left;
-	}
-
-	.names {
-		display: flex;
-		flex-direction: column;
-	}
-	.name {
-		font-size: 65px;
-		line-height: 45px;
-		font-weight: 700;
-		width: -webkit-fill-available;
-	}
-
-	.profesion {
-		font-size: 20px;
-	}
-	.bio {
-		font-size: 20px;
-		text-align: center;
-		width: 600px;
-		padding: 50px;
-		text-shadow: 2px;
-		line-height: 26px;
-/* 
-		overflow: hidden;
-		height: 5px;
-		border-right: .15em solid orange;
-		white-space: nowrap;
-		animation: typing 1s steps(150, end) forwards;
-		width: 0; */
-	}
-
-	.timeline{
-		width: 100%;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		margin: 15px;
-	}
-
-	span{
-		font-size: 28px;
-		/* padding: 50px; */
-	}
-
-	@keyframes typing {
-		from { width: 0 }
-		to { width: 100% }
-	}
-
 </style>

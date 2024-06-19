@@ -1,7 +1,7 @@
 import { icons_tech, icons_products } from '../utils/icons'
 import { company_logos } from '../utils/images'
 import { colors } from '../utils/constants'
-import type { Employment } from '../interfaces'
+import type { Employment, Employe } from '../interfaces'
 
 export const employmentData: Employment[] = [
 	//Periferia
@@ -121,3 +121,10 @@ export const employmentData: Employment[] = [
 		colorTheme: (op) => colors.saludelectronica(op)
 	}
 ]
+
+export const EmployeData: Employe = {
+	firstName: 'Iván',
+	lastName: 'Mafla',
+	profesion: 'Senior Frontend enginer',
+	aboutMe: '+5 años de experiencia, Soy ingeniero electrónico orientado a desarrollo web y me especializo en construir (y ocasionalmente diseñar) aplicaciones web, Actualmente estoy enfocado en plataformas de pagos. ',
+}

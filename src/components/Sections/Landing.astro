@@ -1,0 +1,68 @@
+---
+interface Props {
+    firstName: string;
+    lastName: string;
+    profesion: string
+    aboutMe: string;
+}
+
+const { firstName, lastName, profesion, aboutMe } = Astro.props
+---
+<section class="experience">
+
+    <div class="my-brand">
+        <img src="icons/logo_0.svg" alt="">
+        <div class="name">
+            <div class="names">
+                {firstName} </br>{lastName}
+            </div>
+            <div class="profesion">
+                {profesion}
+            </div>
+        </div>
+    </div>
+
+    <div class="about-me">
+        {aboutMe}
+    </div>
+</section>
+
+<style>
+    .experience{
+        height: 100dvh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+	}
+
+    .my-brand {
+        display: flex;
+		flex-direction: row;
+		margin-top: 25dvh;
+		text-align: justify;
+		float: left;
+
+        .names {
+            display: flex;
+            flex-direction: column;
+        }
+        .name {
+            font-size: 65px;
+            line-height: 38px;
+            font-weight: 700;
+            width: -webkit-fill-available;
+        }
+        .profesion {
+            font-size: 20px;
+        }
+    }
+
+	.about-me {
+		font-size: 20px;
+		text-align: center;
+		width: 600px;
+		padding: 50px;
+		text-shadow: 2px;
+		line-height: 26px;
+	}
+</style>

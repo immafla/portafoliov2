@@ -8,3 +8,10 @@ export interface Employment {
 	proyects: string[];
 	colorTheme: (value:number) => string;
 }
+
+export interface Employe {
+	firstName: string;
+	lastName: string;
+	profesion: string;
+	aboutMe: string;
+}

@@ -24,5 +24,4 @@ export const icons_products = {
     gou: 'icons/logo-gou-white-long.svg',
     octa_cloud: 'icons/octa-cloud.png',
     avalpaycenter: 'icons/logo-avalpay.png',
-    
 }

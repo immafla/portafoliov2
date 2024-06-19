@@ -1,0 +1,26 @@
+---
+import Timeline from '../Shared/Timeline.astro'
+import { employmentData } from '../../data'
+---
+<section class="experience">
+    <span>
+        Experiencia laboral
+    </span>
+    <Timeline employmentData={employmentData}/>
+</section>
+
+<style>
+    .experience{
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin: 15px;
+	}
+
+	span{
+		font-size: 28px;
+		padding-block: 50px;
+	}
+
+</style>
