@@ -1,10 +1,11 @@
 export interface Employment {
+	jobTitle: string;
+	period: string;
     companyLogo: string;
     urlSite: string;
-	title: string;
-	subtitle: string;
 	body: string[];
 	stackDev: string[];
+	jobPosition?: any[]
 	proyects: string[];
 	colorTheme: (value:number) => string;
 }

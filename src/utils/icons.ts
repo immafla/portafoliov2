@@ -18,6 +18,8 @@ export const icons_tech = {
     node: 'icons/nodejs-icon-logo-svgrepo-com.svg',
     redux: 'icons/redux-svgrepo-com.svg',
     nextjs: 'icons/nextjs-svgrepo-com.svg',
+    mongodb: 'icons/mongodb-svgrepo-com.svg',
+    javascript: 'icons/javascript-svgrepo-com.svg',
 }
 
 export const icons_products = {

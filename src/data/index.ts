@@ -6,14 +6,19 @@ import type { Employment, Employe } from '../interfaces'
 export const EmploymentData: Employment[] = [
 	//Periferia
 	{	
+		jobTitle:"Lider técnico frontend, Fábrica de desarrollo:",
+		period: "Junio 2023 - Actualmente / Tiempo completo",
 		companyLogo: company_logos.periferia,
         urlSite: 'https://periferiaitgroup.com/',
-		title:"Lider técnico frontend, Fábrica de desarrollo:",
-		subtitle: "Junio 2023 - Actualmente / Tiempo completo",
 		body: [
 			"Liderar y delegar funciones al equipo de desarrollo.", 
 			"Apoyo técnico a proyectos en diferentes tecnologías web.", 
 			"Ocasionalmente dictar semilleros front end."
+		],
+		jobPosition: [
+			{
+
+			}
 		],
 		stackDev: [
 			icons_tech.reactjs,
@@ -31,10 +36,10 @@ export const EmploymentData: Employment[] = [
 	},
 	//Adl
 	{
+		jobTitle:"Desarrollador frontend, Avaldigitallabs:",
+		period: "Septiembre 2021 - Junio 2023 / Tiempo completo",
 		companyLogo: company_logos.adl,
         urlSite: 'https://www.adldigitallab.com/',
-		title:"Desarrollador frontend, Avaldigitallabs:",
-		subtitle: "Septiembre 2021 - Junio 2023 / Tiempo completo",
 		body: [
 			"Participar en la definición del producto.",
 			"Implementar y crear microfrontends.",
@@ -54,6 +59,7 @@ export const EmploymentData: Employment[] = [
 			icons_tech.redux,
 			icons_tech.dynamodb,
 			icons_tech.jest,
+			icons_tech.mongodb,
 		],
 		proyects: [
 			icons_products.gou,
@@ -64,8 +70,8 @@ export const EmploymentData: Employment[] = [
 	{
 		companyLogo: company_logos.mineducacion,
         urlSite: 'https://www.mineducacion.gov.co/portal/',
-		title:"Desarrollador fullstack",
-		subtitle: "Marzo 2022 - Febrero 2023 / Freelance",
+		jobTitle:"Desarrollador fullstack",
+		period: "Marzo 2022 - Febrero 2023 / Freelance",
 		body: [
 			"Se logra migrar al 100% el aplicativo a Angular 13.",
 			"Diseño e implementación de infraestructura y frontend.",
@@ -87,6 +93,7 @@ export const EmploymentData: Employment[] = [
 			icons_tech.nginx,
 			icons_tech.github,
 			icons_tech.docker,
+			icons_tech.linux,
 		],
 		proyects: [
 			icons_products.gou,
@@ -97,8 +104,8 @@ export const EmploymentData: Employment[] = [
 	{
 		companyLogo: company_logos.salud_electronica,
         urlSite: 'https://saludelectronica.com/',
-		title:"Desarrollador fullstack:",
-		subtitle: "Abril 2023 - Actualmente / Freelance",
+		jobTitle:"Desarrollador fullstack:",
+		period: "Abril 2023 - Actualmente / Freelance",
 		body: [
 			"Participar en la definición del producto.",
 			"Dividir funcionalidades en componentes atomicos.",
@@ -114,11 +121,56 @@ export const EmploymentData: Employment[] = [
 			icons_tech.css,
 			icons_tech.node,
 			icons_tech.github,
+			icons_tech.mongodb
 		],
 		proyects: [
 			icons_products.octa_cloud,
 		],
 		colorTheme: (op) => colors.saludelectronica(op)
+	},
+	//Radio enlace
+	{
+		companyLogo: company_logos.radio_enlace,
+        urlSite: 'https://radioenlacesas.com/',
+		jobTitle:"Desarrollador junior:",
+		period: "Agosto 2015 - Agosto 2016 / Tiempo completo",
+		body: [
+			"Diseño y desarrollo de pagina web corporativa.",
+			"Maquetación responsive design de todas las vistas.",
+			"Diseño y desarrollo de aplicación web para manejo de inventario interno.",
+			"Optimización del rendimiento de las consultas en MongoDB."
+		],
+		stackDev: [
+			icons_tech.html,
+			icons_tech.css,
+			icons_tech.node,
+			icons_tech.mongodb,
+		],
+		proyects: [
+			
+		],
+		colorTheme: (op) => colors.radioenlace(op)
+	},
+	//AD Impresos
+	{
+		companyLogo: company_logos.ad_impresos,
+        urlSite: 'https://adimpresossas.com/',
+		jobTitle:"Diseñador publicista + Desarrollador junior:",
+		period: "Febrero 2011 - Enero 2015 / Tiempo completo",
+		body: [
+			"Diseño y desarrollo de pagina web corporativa.",
+			"Maquetación responsive design de todas las vistas.",
+			"Diseño de publicidad general en COREL DRAWN e Illustrator",
+		],
+		stackDev: [
+			icons_tech.javascript,
+			icons_tech.html,
+			icons_tech.css,
+		],
+		proyects: [
+			
+		],
+		colorTheme: (op) => colors.adimpresos(op)
 	}
 ]
 
