@@ -3,7 +3,7 @@ import { company_logos } from '../utils/images'
 import { colors } from '../utils/constants'
 import type { Employment, Employe } from '../interfaces'
 
-export const employmentData: Employment[] = [
+export const EmploymentData: Employment[] = [
 	//Periferia
 	{	
 		companyLogo: company_logos.periferia,

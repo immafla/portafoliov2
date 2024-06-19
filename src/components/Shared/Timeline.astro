@@ -2,15 +2,15 @@
 import CardTimeline from './CardTimeline.astro'
 import { type Employment } from '../../interfaces'
 interface Props {
-	employmentData:Employment[]
+	EmploymentData:Employment[]
 }
 
-const { employmentData } = Astro.props;
+const { EmploymentData } = Astro.props;
 ---
 
 <div class="container-timeline">
 	{
-		employmentData.map((itemEmploye, index) =>
+		EmploymentData.map((itemEmploye, index) =>
 			<div class="item-timeline" style={{flexDirection: `${index%2==0 ? "row" : "row-reverse"}` }}>
 
 				<div class="company-logo">
